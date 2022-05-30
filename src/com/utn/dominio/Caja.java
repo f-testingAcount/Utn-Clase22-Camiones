@@ -10,17 +10,23 @@ package com.utn.dominio;
  */
 public class Caja extends Carga {
     
+    //Atributos
+    
     private float peso;
+    
+    //Inicializacion de atributos
     
     public Caja(String contenido, float peso) {
         super(contenido);
         this.peso = peso;
     }
-
+    
+    //Getters y setters (En este caso un setter)
     public void setPeso(float peso) {
         this.peso = peso;
     }    
 
+    //Metodo sobreescrito de clase abstracta
     @Override
     public float calcularPeso() {
         return peso;

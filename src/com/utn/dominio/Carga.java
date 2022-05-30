@@ -20,13 +20,14 @@ public abstract class Carga implements Comparable<Carga> {
         return contenido;
     }
 
-    public abstract float calcularPeso();
+    public abstract float calcularPeso(); //Como abstracto no tiene implementacion,
+                                          //Necesariamente se implementa en la clase hija
 
     @Override
     public String toString() {
         return "Carga con: [" + contenido + "]";
     }
-
+    
     @Override //Generamos un criterio de comparacion
     public int compareTo(Carga o) {        
         int criterio = 0;

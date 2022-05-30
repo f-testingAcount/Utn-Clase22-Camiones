@@ -12,21 +12,26 @@ import java.util.Collections;
  * @author user
  */
 public class Camion {
-
+    
+    //Variables (Abributos)
+    
     private float cargaMax;
     private int estado;
     private ArrayList<Carga> cargas;
-
-    public Camion() {
+    
+    //Inicializacion de variables(Atributos)
+    public Camion() { //Sin parametros
         estado = 1; //Disponible
         cargas = new ArrayList<>();
     }
 
-    public Camion(float cargaMax) {
+    public Camion(float cargaMax) { //Con un/varios parametros
         estado = 1; //Disponible
         cargas = new ArrayList<>();
         this.cargaMax = cargaMax;
     }
+    
+    //Getters y setters
 
     public float getCargaMax() {
         return cargaMax;
@@ -40,6 +45,7 @@ public class Camion {
         return estado;
     }
 
+    //Metodos propios
     public float calcularPeso() {
         float aux = 0;
         for (Carga x : cargas) {
